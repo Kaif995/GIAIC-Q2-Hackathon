@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Global styles for content margins */
+.content {
+  margin-left:12vh; /* Adjust as needed */
+  margin-right: 12vh; /* Adjust as needed */
+}
+
+/* Optional: Add a media query for responsiveness */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 10px; /* Adjust for smaller screens */
+    margin-right: 10px; /* Adjust for smaller screens */
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
